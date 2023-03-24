@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.responsive{
+    max-width: 20rem;
+    max-height: 20rem;
+}

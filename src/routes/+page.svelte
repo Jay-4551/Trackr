@@ -5,37 +5,32 @@
 	<title>Trackr</title>
 </svelte:head>
 <main>
-    <div class="flex flex-col h-screen w-full items-center justify-center py-6">
-        <div class=" flex md:flex-row flex-col justify-evenly w-full">
+    <div class="flex flex-col h-screen w-full items-center justify-center py-6 bg-[#0B090A]" style="background-image: url('assets/bg-pattern.png');">
+        <div class=" flex md:flex-row flex-col justify-evenly w-full items-center">
             <div class="flex flex-col">
-                <h1 class="text-8xl">Trackr</h1>
-                <p class="text-3xl my-8 text-slate-600">A Website For Game Collectors.</p>
-                <button class="text-3xl text-white bg-gray-800 px-6 py-2 rounded-sm w-fit">Join Now!</button>
+                <h1 class="text-8xl text-white">Trackr</h1>
+                <p class="text-3xl my-8 text-white">A Website For <span class="text-[#E5383B]">Game</span> Collectors.</p>
+                <button class="text-3xl text-white bg-[#BA181B] border border-red-500 px-6 py-2 rounded-sm w-fit">Join Now!</button>
             </div>
             <div>
-                <img src="assets/Gameboy Hero Asset.png" alt="Gameboy Hero Image">
+                <img src="assets/Red-Gameboys.png" alt="Gameboy Hero Image">
             </div>
         </div>
-        <!-- <div class="flex md:flex-row flex-col w-full justify-evenly my-10">
-            <div class="flex flex-col p-4 border rounded">
-                <Library size={75} class="self-center"/>
-                <p class="text-slate-600 text-xl max-w-[45ch]">Track Your Gaming Collection</p>
-            </div>
-            <div class="flex flex-col p-4 border rounded">
-                <Wallet size={75} class="self-center"/>
-                <p class="text-slate-600 text-xl max-w-[45ch]">Track The Price of Games</p>
-            </div>
-        </div> -->
     </div>
-    <hr class="w-5/6 m-auto">
-    <div class="grid grid-cols-2">
+    <div class="flex flex-row my-8 justify-center w-full items-center">
+        <img src="assets/Cartridges-red.png" alt="">
         <div>
-            <!-- Filler Div for now -->
-        </div>
-        <div class="flex flex-col w-[90%] p-4 m-auto justify-center">
-            <h1 class="text-4xl">What is Trackr?</h1>
-            <p class="max-w-[80ch]">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque aliquet enim sed sollicitudin. Integer ullamcorper nisl ipsum, at accumsan nisl semper et. Praesent et nibh vehicula nunc rutrum malesuada ac id mi. Fusce tellus ipsum, volutpat vitae vestibulum ut, dapibus non ante. Fusce pulvinar mi vitae augue finibus mollis. Nunc blandit luctus laoreet. Fusce sagittis placerat est in efficitur. Proin quis faucibus justo, et volutpat justo. Curabitur ornare elit at dui fermentum, ac vulputate metus fermentum. Vestibulum lacinia nulla tortor, ac molestie dolor viverra id. Vivamus purus sem, posuere vel eros vitae, elementum semper felis. Proin mi risus, tincidunt at ante id, congue lacinia turpis. Praesent convallis ornare mauris sit amet ornare. Sed gravida urna enim, sit amet blandit libero porta quis.
+            <h1 class="text-6xl font-semibold text-slate-800">What is Trackr<span class="text-[#E5383B]">?</span></h1>
+            <p class="text-slate-600 max-w-[80ch] my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ornare urna. Pellentesque congue tincidunt felis. Vivamus feugiat, urna eget fringilla facilisis, felis enim tincidunt risus, et euismod ipsum sem a nulla. Maecenas sem purus, interdum a lectus ut, ornare accumsan est.
+            </p>
+            <h1 class="text-4xl font-semibold text-slate-800">Digital <span class="text-[#E5383B]">Library</span></h1>
+            <p class="text-slate-600 max-w-[80ch] my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ornare urna. Pellentesque congue tincidunt felis. Vivamus feugiat, urna eget fringilla facilisis, felis enim tincidunt risus, et euismod ipsum sem a nulla. Maecenas sem purus, interdum a lectus ut, ornare accumsan est.
+            </p>
+            <h1 class="text-4xl font-semibold text-slate-800">Price <span class="text-[#E5383B]">Tracking</span></h1>
+            <p class="text-slate-600 max-w-[80ch] my-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ornare urna. Pellentesque congue tincidunt felis. Vivamus feugiat, urna eget fringilla facilisis, felis enim tincidunt risus, et euismod ipsum sem a nulla. Maecenas sem purus, interdum a lectus ut, ornare accumsan est.
             </p>
         </div>
     </div>
