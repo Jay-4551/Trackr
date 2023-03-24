@@ -16,7 +16,7 @@
     ? 'max-w-full bg-white text-[#161A1D] hover:bg-gray-200'
     : ''}">Tracking</a>
     </div>
-    <button class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white">Sign Up</button>
+    <button class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white" onclick="window.location.href='/register';">Sign Up</button>
   </nav>
   <div class="w-full bg-black">
     <div class="w-5/6 h-[1px] m-auto bg-[#161A1D]"></div>
