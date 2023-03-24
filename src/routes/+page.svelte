@@ -27,10 +27,16 @@
             </div>
         </div> -->
     </div>
-    <div class="flex flex-col w-[90%] p-4 m-auto justify-center">
-        <h1 class="text-4xl">What is Trackr?</h1>
-        <p class="max-w-[80ch]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque aliquet enim sed sollicitudin. Integer ullamcorper nisl ipsum, at accumsan nisl semper et. Praesent et nibh vehicula nunc rutrum malesuada ac id mi. Fusce tellus ipsum, volutpat vitae vestibulum ut, dapibus non ante. Fusce pulvinar mi vitae augue finibus mollis. Nunc blandit luctus laoreet. Fusce sagittis placerat est in efficitur. Proin quis faucibus justo, et volutpat justo. Curabitur ornare elit at dui fermentum, ac vulputate metus fermentum. Vestibulum lacinia nulla tortor, ac molestie dolor viverra id. Vivamus purus sem, posuere vel eros vitae, elementum semper felis. Proin mi risus, tincidunt at ante id, congue lacinia turpis. Praesent convallis ornare mauris sit amet ornare. Sed gravida urna enim, sit amet blandit libero porta quis.
-        </p>
+    <hr class="w-5/6 m-auto">
+    <div class="grid grid-cols-2">
+        <div>
+            <!-- Filler Div for now -->
+        </div>
+        <div class="flex flex-col w-[90%] p-4 m-auto justify-center">
+            <h1 class="text-4xl">What is Trackr?</h1>
+            <p class="max-w-[80ch]">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pellentesque aliquet enim sed sollicitudin. Integer ullamcorper nisl ipsum, at accumsan nisl semper et. Praesent et nibh vehicula nunc rutrum malesuada ac id mi. Fusce tellus ipsum, volutpat vitae vestibulum ut, dapibus non ante. Fusce pulvinar mi vitae augue finibus mollis. Nunc blandit luctus laoreet. Fusce sagittis placerat est in efficitur. Proin quis faucibus justo, et volutpat justo. Curabitur ornare elit at dui fermentum, ac vulputate metus fermentum. Vestibulum lacinia nulla tortor, ac molestie dolor viverra id. Vivamus purus sem, posuere vel eros vitae, elementum semper felis. Proin mi risus, tincidunt at ante id, congue lacinia turpis. Praesent convallis ornare mauris sit amet ornare. Sed gravida urna enim, sit amet blandit libero porta quis.
+            </p>
+        </div>
     </div>
 </main>
