@@ -17,9 +17,9 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-row my-8 justify-center w-full items-center">
+    <div class="flex flex-row my-12 justify-center w-full items-center h-[70vh]">
         <img src="assets/Cartridges-red.png" alt="">
-        <div>
+        <div class="ml-10">
             <h1 class="text-6xl font-semibold text-slate-800">What is Trackr<span class="text-[#E5383B]">?</span></h1>
             <p class="text-slate-600 max-w-[80ch] my-4">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ornare urna. Pellentesque congue tincidunt felis. Vivamus feugiat, urna eget fringilla facilisis, felis enim tincidunt risus, et euismod ipsum sem a nulla. Maecenas sem purus, interdum a lectus ut, ornare accumsan est.
