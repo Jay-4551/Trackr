@@ -19,6 +19,7 @@
 	"type": "module",
 	"dependencies": {
 		"flowbite": "^1.6.4",
+		"igdb-api-node": "^5.0.2",
 		"lucide-svelte": "^0.127.0",
 		"puppeteer": "^19.7.5"
 	}

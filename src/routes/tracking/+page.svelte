@@ -1,5 +1,8 @@
 <script>
-    import { ChevronDown } from "lucide-svelte";
+    
+  /** @type {import('./$types').PageData} */  
+  export let data;
+    console.log(data);
 </script>
 <svelte:head>
 	<title>Trackr - Tracking</title>
@@ -13,5 +16,8 @@
                 <input type="text" placeholder="Search a game..." id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-[#E5383B] focus:border-[#E5383B] block w-4/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#E5383B] dark:focus:border-[#E5383B]">
             <button class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white mx-4">Search</button>
         </div>
+    </div>
+    <div>
+        {data}
     </div>
 </main>
