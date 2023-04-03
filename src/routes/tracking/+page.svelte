@@ -1,8 +1,20 @@
 <script>
     
-  /** @type {import('./$types').PageData} */  
-  export let data;
-    console.log(data);
+    /** @type {import('./$types').PageData} */ 
+    import { search } from '$lib/stores.js'; 
+
+    export let data;
+    let obj = data;
+
+    let thing = obj.data[1];
+    
+    let searchText;
+
+    function update(){
+        search.set(searchText);
+        console.log(searchText);
+    }
+
 </script>
 <svelte:head>
 	<title>Trackr - Tracking</title>
@@ -12,12 +24,15 @@
         <div class="flex w-5/6 p-4">
             <h1 class="text-5xl font-semibold text-white self-start">Track The <span class="text-[#E5383B]">Price</span> Of Games</h1>
         </div>
-        <div class="flex flex-row p-4 items-center w-5/6">
-                <input type="text" placeholder="Search a game..." id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-[#E5383B] focus:border-[#E5383B] block w-4/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#E5383B] dark:focus:border-[#E5383B]">
-            <button class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white mx-4">Search</button>
-        </div>
+        <form class="flex flex-row p-4 items-center w-5/6" method="POST" action="/tracking">
+                <input bind:value={searchText} type="text" placeholder="Search a game..." id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-[#E5383B] focus:border-[#E5383B] block w-4/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#E5383B] dark:focus:border-[#E5383B]">
+            <button on:click={update} class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white mx-4">Search</button>
+        </form>
     </div>
     <div>
-        {data}
+        
+        {#if typeof thing != 'undefined'}
+            <h1 class="text-red-500">{thing.name}</h1>
+        {/if}
     </div>
 </main>

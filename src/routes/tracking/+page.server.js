@@ -1,4 +1,11 @@
 /** @type {import('./$types').PageLoad} */
+import { search } from '$lib/stores.js'; 
+let searchTerm;
+
+search.subscribe(value =>{
+    searchTerm = search;
+});
+
 export async function load({ fetch }) {
     const url = `https://api.igdb.com/v4/games/`;
     const response = await fetch(url,{
@@ -10,10 +17,7 @@ export async function load({ fetch }) {
             'Authorization': 'Bearer fxr3syzsjancx9vzdgryoq89lz6udy',
 
         },
-        body: {
-            fields: "name",
-            limit: "10"
-        }
+        body: `fields name, platforms.*; search ${searchTerm};`
     });
 
     const data = {data:await response.json()};
@@ -21,3 +25,4 @@ export async function load({ fetch }) {
 
     return data ;
   }
+
