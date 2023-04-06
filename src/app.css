@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.responsive{
+.responsive {
     max-width: 20rem;
     max-height: 20rem;
+}
+
+@font-face {
+    font-family: "Harmonic";
+    src: url('assets/fonts/Harmonic.otf');
 }
