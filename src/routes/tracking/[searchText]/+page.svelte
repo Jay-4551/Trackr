@@ -6,22 +6,36 @@
 
 {#if data.data.hasOwnProperty("length")}
   {#each data.data as game}
-    <h1>{game.name}</h1>
-    <h2>{game.id}</h2>
-    <!-- {#if game.platforms.length > 0}
+    {#if game.platforms.length > 0}
       {#each game.platforms as platform}
-        <div>{platform.abbreviation}</div>
-        <div>{platform.name}</div>
+        <div
+          class="flex flex-row p-4 m-4 bg-[#161A1D] border border-gray-600 w-5/6 rounded-md"
+        >
+          <img
+            src={"https://images.igdb.com/igdb/image/upload/t_cover_big/" +
+              game.cover.image_id +
+              ".jpg"}
+            alt=""
+            class="rounded-sm border border-gray-600 w-[160px] h-[220px]"
+          />
+          <div class="flex flex-col ml-10">
+            <h1 class="text-4xl text-white">{game.name} - {platform.name}</h1>
+            <h2 class="text-white">
+              Developers:
+              {#each game.involved_companies as company}
+                {company.company.name + " "}
+              {/each}
+            </h2>
+          </div>
+        </div>
       {/each}
-    {:else} -->
-    <!-- TODO add a version for single platform -->
-    <!-- {/if} -->
+    {/if}
   {/each}
+{/if}
+<!-- {/each}
 {:else}
   <h1>{data.data.name}</h1>
   <h2>{data.data.id}</h2>
   {#each data.data.platforms as platform}
     <div>{platform.abbreviation}</div>
-    <div>{platform.name}</div>
-  {/each}
-{/if}
+    <div>{platform.name}</div>-->

@@ -15,7 +15,8 @@ export async function load({ fetch, params }) {
             'Client-ID': 'vcyrscnerz5ln3g60izbyzu9fxmu15',
             'Authorization': 'Bearer fxr3syzsjancx9vzdgryoq89lz6udy',
         },
-        body: `fields name, platforms.*; search "${params.searchText}";`
+        body: `fields name, platforms.*, cover.image_id, involved_companies.company.name; search "${params.searchText}";where cover.image_id != null
+         & keywords != [24124, 1147, 1034, 1603, 3384, 541, 2004, 5340] & keywords != null & keywords > 1 & category != 1 & category != 13; limit 15;`
     });
     const data = { data: await response.json() };
 
