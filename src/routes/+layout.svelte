@@ -1,6 +1,19 @@
-<script>
+<script lang="ts">
   import "../app.css";
   import { page } from "$app/stores";
+  import { onMount } from "svelte";
+  import { supabaseClient } from "$lib/supabase";
+  import { invalidateAll } from "$app/navigation";
+  onMount(() => {
+    const {
+      data: { subscription },
+    } = supabaseClient.auth.onAuthStateChange(() => {
+      invalidateAll();
+    });
+    return () => {
+      subscription.unsubscribe();
+    };
+  });
 </script>
 
 <nav class="flex flex-row justify-around p-4 items-center bg-black">
