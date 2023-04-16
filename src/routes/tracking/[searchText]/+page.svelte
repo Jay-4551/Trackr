@@ -19,7 +19,9 @@
             class="rounded-sm border border-gray-600 w-[160px] h-[220px]"
           />
           <div class="flex flex-col ml-10">
-            <h1 class="text-4xl text-white">{game.name} - {platform.name}</h1>
+            <h1 class="text-3xl text-white max-w-[55ch]">
+              {game.name} - {platform.name}
+            </h1>
             <h2 class="text-white">
               Developers:
               {#each game.involved_companies as company}
