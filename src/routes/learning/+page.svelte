@@ -18,7 +18,7 @@
         <form
             class="flex flex-row p-4 items-center w-5/6"
             method="GET"
-            action="/tracking/{searchText}"
+            action="/learning/{searchText}"
         >
             <input
                 bind:value={searchText}
