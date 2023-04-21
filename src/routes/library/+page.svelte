@@ -1,5 +1,8 @@
 <script>
     import { ChevronDown } from "lucide-svelte";
+    export let data;
+    let { countries } = data;
+    $: ({ countries } = data);
 </script>
 
 <svelte:head>
@@ -138,7 +141,11 @@
             class="flex flex-row h-[50vh] w-5/6 rounded-sm bg-[#161A1D] border border-gray-600 font-semibold my-10"
         >
             <h2 class="text-3xl text-white self-center m-auto">
-                Add Games To Your Library!
+                <ul>
+                    {#each countries as country}
+                        <li>{country.name}</li>
+                    {/each}
+                </ul>
             </h2>
         </div>
         <div class="flex flex-row w-5/6 justify-end">
