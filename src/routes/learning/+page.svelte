@@ -1,16 +1,9 @@
 <script lang="ts">
-    import { prodName } from "$lib/stores";
-
     let searchText: string;
-
-    function update() {
-        // search.set(searchText);
-        console.log("search text:" + searchText);
-    }
 </script>
 
 <svelte:head>
-    <title>Trackr - Tracking</title>
+    <title>Trackr - Encyclopedia</title>
 </svelte:head>
 <main>
     <div
@@ -19,7 +12,7 @@
     >
         <div class="flex w-5/6 p-4">
             <h1 class="text-5xl font-semibold text-white self-start">
-                Track The <span class="text-[#E5383B]">Price</span> Of Games
+                Explore a vast <span class="text-[#E5383B]">Library</span> Of Games
             </h1>
         </div>
         <form
