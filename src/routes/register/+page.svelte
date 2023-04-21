@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { supabase } from "$lib/supabaseClient";
+
     let username: String = "";
     let email: String = "";
     let password: String = "";
@@ -20,9 +22,7 @@
             <form
                 action=""
                 class="w-full flex flex-col items-center"
-                on:submit={() => {
-                    console.log(username, email, password);
-                }}
+                on:submit={addUser}
             >
                 <input
                     type="text"

@@ -1,8 +1,13 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import type { PageData } from "./$types";
+  import { prodName } from "$lib/stores";
 
+  let gameName: string;
   export let data: PageData;
 </script>
+
+{console.log(prodName)}
 
 {#if data.data.hasOwnProperty("length")}
   {#each data.data as game}
@@ -28,6 +33,19 @@
                 {company.company.name + " "}
               {/each}
             </h2>
+            <form
+              class="flex flex-row p-4 items-center w-5/6"
+              method="GET"
+              action="/tracking/[searchText]/{gameName}"
+            >
+              <button
+                class="text-white p-4 bg-slate-600"
+                type="submit"
+                on:click={() => {
+                  gameName = game.name + " " + platform.abbreviation;
+                }}>This Game</button
+              >
+            </form>
           </div>
         </div>
       {/each}

@@ -16,3 +16,4 @@ export interface Platform {
   abbreviation: string,
   name: string
 }
+

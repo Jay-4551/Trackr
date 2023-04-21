@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { prodName } from "$lib/stores";
+
     let searchText: string;
 
     function update() {
@@ -33,7 +35,10 @@
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-sm focus:ring-[#E5383B] focus:border-[#E5383B] block w-4/6 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#E5383B] dark:focus:border-[#E5383B]"
             />
             <button
-                on:click={update}
+                on:click={() =>
+                    prodName.subscribe((value) => {
+                        $prodName = searchText;
+                    })}
                 type="submit"
                 class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white mx-4"
                 >Search</button

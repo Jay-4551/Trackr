@@ -1,5 +1,6 @@
 import type { PageServerLoad } from './$types';
 import type { GameList, SingleGame } from '$lib/types';
+import { prodName } from '$lib/stores';
 // import { search } from '$lib/stores.js'; 
 
 // search.subscribe(value =>{
@@ -20,7 +21,10 @@ export async function load({ fetch, params }) {
     });
     const data = { data: await response.json() };
 
-
     return data;
+
+
 }
+
+
 
