@@ -7,7 +7,7 @@
 </script>
 
 {console.log(data)}
-<!-- {#if data.data.hasOwnProperty("length")}
+{#if data.data.hasOwnProperty("length")}
   {#each data.data as game}
     {#if game.platforms.length > 0}
       <div
@@ -24,12 +24,14 @@
           <h1 class="text-3xl text-white max-w-[55ch]">
             {game.name}
           </h1>
-          <h2 class="text-white">
-            Developers:
-            {#each game.involved_companies as company}
-              {company.company.name + " "}
-            {/each}
-          </h2>
+          {#if game.involved_companies != null}
+            <h2 class="text-white">
+              Developers:
+              {#each game.involved_companies as company}
+                {company.company.name + " "}
+              {/each}
+            </h2>
+          {/if}
           <h2 class="text-white">
             Platforms:
             {#each game.platforms as platform}
@@ -41,19 +43,15 @@
             method="GET"
             action="/tracking/[searchText]/{gameName}"
           >
-            <button
-              class="text-white p-4 bg-slate-600"
-              type="submit"
-              on:click={() => {
-                gameName = game.name + " " + platform.abbreviation;
-              }}>This Game</button
+            <button class="text-white p-4 bg-slate-600" type="submit"
+              >This Game</button
             >
           </form>
         </div>
       </div>
     {/if}
   {/each}
-{/if} -->
+{/if}
 <!-- {/each}
 {:else}
   <h1>{data.data.name}</h1>

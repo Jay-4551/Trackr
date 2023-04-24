@@ -2,11 +2,6 @@
     import { prodName } from "$lib/stores";
 
     let searchText: string;
-
-    function update() {
-        // search.set(searchText);
-        console.log("search text:" + searchText);
-    }
 </script>
 
 <svelte:head>

@@ -13,8 +13,19 @@
 </script>
 
 {console.log(data.price)}
-{data.price["product-name"]}
+{#each data.price.products as game}
+    {#if game["cib-price"] != null && game["console-name"].indexOf("YuGiOh") === -1 && game["console-name"].indexOf("Comic") === -1 && game["console-name"].indexOf("Magic") === -1 && game["product-name"].indexOf("#") === -1}
+        <div class="flex flex-col my-2">
+            {game["product-name"]} - {game["console-name"]}
+            <div class="flex flex-row mx-2">
+                {formatter.format(game["cib-price"] / 100)}
+            </div>
+        </div>
+    {/if}
+{/each}
+
+<!-- {data.price["product-name"]}
 {formatter.format(data.price["cib-price"] / 100)}
 {#if data.price.hasOwnProperty("length")}
     {#each data.price as game}{/each}
-{/if}
+{/if} -->
