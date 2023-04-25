@@ -40,7 +40,7 @@
                         />
                     </div>
                     <div class="flex flex-col mx-6 relative top-[-140px]">
-                        <h2 class="text-white text-5xl mb-2 font-semibold">
+                        <h2 class="text-[#F5F5F4] text-5xl mb-2 font-semibold">
                             {game.name}
                         </h2>
                         <h2 class="text-white text-xl font-semibold">
@@ -75,14 +75,41 @@
                                 </div>
                             {/each}
                         </div>
-                        <div class="flex flex-col">
-                            <h2 class="text-white text-xl font-semibold mb-2">
+                        <div class="flex flex-col mb-6">
+                            <h2 class="text-white text-2xl font-semibold mb-2">
                                 Summary
                             </h2>
                             <hr class="w-5/6 mb-2" />
                             <p class="text-white text-lg max-w-[100ch]">
                                 {game.summary}
                             </p>
+                        </div>
+                        <h2 class="text-white text-2xl font-semibold mb-2">
+                            Screenshots & Videos
+                        </h2>
+                        <hr class="w-5/6 mb-2" />
+                        <div
+                            class="  whitespace-nowrap overflow-y-hidden overflow-x-scroll w-[100ch] py-2 inline-flex"
+                        >
+                            {#each game.screenshots as screenshot}
+                                <img
+                                    src={"https://images.igdb.com/igdb/image/upload/t_screenshot_med/" +
+                                        screenshot.image_id +
+                                        ".jpg"}
+                                    alt=""
+                                    class="mr-3"
+                                />
+                            {/each}
+
+                            {#each game.videos as video}
+                                <iframe
+                                    class="w-[555px] h-[315px] mr-3"
+                                    src={"https://www.youtube.com/embed/" +
+                                        video.video_id}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                                />
+                            {/each}
                         </div>
                     </div>
                 </div>
