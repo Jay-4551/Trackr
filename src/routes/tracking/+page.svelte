@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { prodName } from "$lib/stores";
-
+    import { searchTerm } from "$lib/stores";
     let searchText: string;
 </script>
 
@@ -32,7 +31,9 @@
             <button
                 type="submit"
                 class="rounded-sm py-2 px-4 bg-[#161A1D] hover:bg-[#BA181B] duration-300 border border-red-500 text-white mx-4"
-                >Search</button
+                on:click={() => {
+                    $searchTerm = searchText;
+                }}>Search</button
             >
         </form>
     </div>

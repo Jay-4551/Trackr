@@ -1,3 +1,5 @@
 import { writable } from 'svelte/store';
 
-export const prodName = writable('');
+export const platform = writable('');
+
+export const searchTerm = writable('');

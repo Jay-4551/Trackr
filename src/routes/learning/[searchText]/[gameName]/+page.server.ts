@@ -16,15 +16,12 @@ export async function load({ fetch, params }) {
             'Client-ID': 'vcyrscnerz5ln3g60izbyzu9fxmu15',
             'Authorization': 'Bearer fxr3syzsjancx9vzdgryoq89lz6udy',
         },
-        body: `fields name, platforms.*, cover.image_id, involved_companies.company.name, first_release_date, summary; search "${params.searchText}";where cover.image_id != null
-         & keywords != [541, 2004, 25908, 24220, 24124, 1147, 1034, 1603] & involved_companies != null  & category != 1 & category != 5 ; limit 10;`
+        body: `fields name, platforms.*, cover.image_id, involved_companies.company.name, summary, screenshots.*, first_release_date, rating, storyline; search "${params.gameName}";where cover.image_id != null
+         & keywords != [24124, 1147, 1034, 1603] & involved_companies != null & platforms != null  ; limit 10;`
     });
     const data = { data: await response.json() };
 
-    return data;
+    return { data: data, name: params.gameName };
 
 
 }
-
-
-

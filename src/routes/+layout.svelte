@@ -24,17 +24,10 @@
     >
     <a
       href="/learning"
-      class="px-4 py-2 hover:bg-white duration-300 hover:text-[#161A1D] rounded-sm{$page
+      class="px-4 mx-2 py-2 hover:bg-white duration-300 hover:text-[#161A1D] rounded-sm{$page
         .route.id == '/learning'
         ? ' bg-white text-[#161A1D] hover:bg-gray-200'
         : ''}">Encyclopedia</a
-    >
-    <a
-      href="/library"
-      class="px-4 py-2 hover:bg-white hover:text-[#161A1D] rounded-sm duration-300 mx-2{$page
-        .route.id == '/library'
-        ? ' bg-white text-[#161A1D] hover:bg-gray-200'
-        : ''}">Library</a
     >
     <a
       href="/tracking"
