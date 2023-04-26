@@ -27,13 +27,13 @@
               <div class="flex flex-col ml-4 py-2.5 h-full">
                 <div class="flex flex-col">
                   <h1
-                    class="text-3xl font-semibold text-white max-w-[35ch] truncate"
+                    class="text-3xl font-semibold text-white max-w-[30ch] truncate"
                   >
                     {game.name}
                   </h1>
                   {#if game.involved_companies != null}
                     <h2
-                      class=" mt-4 text-white text-lg font-semibold max-w-[55ch] truncate"
+                      class=" mt-4 text-white text-lg font-semibold max-w-[35ch] truncate"
                     >
                       <span class="text-red-600">Developers - </span>
                       {#each game.involved_companies as company}
@@ -53,7 +53,7 @@
                 <div class="flex flex-row mb-2 pt-2">
                   {#each game.platforms as platform}
                     <div
-                      class="bg-[#BA181B] text-white text-xs font-semibold py-1 px-3 mr-3 w-fit rounded-sm cursor-default"
+                      class="bg-[#BA181B] text-white text-xs font-semibold py-1 px-3 mr-3 w-fit rounded-sm cursor-default max-w-[14ch] truncate"
                     >
                       {platform.name}
                     </div>

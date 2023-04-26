@@ -17,7 +17,7 @@ export async function load({ fetch, params }) {
             'Authorization': 'Bearer fxr3syzsjancx9vzdgryoq89lz6udy',
         },
         body: `fields name, platforms.*, cover.image_id, involved_companies.company.name, first_release_date, summary; search "${params.searchText}";where cover.image_id != null
-         & keywords != [541, 2004, 25908, 24220, 24124, 1147, 1034, 1603] & involved_companies != null  & category != 1 & category != 5 ; limit 10;`
+         & keywords != [2004, 25908, 24220, 24124, 1147, 1034, 1603] & involved_companies != null  & category != 1 & category != 5 ; limit 10;`
     });
     const data = { data: await response.json() };
 

@@ -5,7 +5,7 @@
 <svelte:head>
     <title>Trackr</title>
 </svelte:head>
-<main>
+<main class="bg-white h-full">
     <div
         class="flex flex-col h-screen w-full items-center justify-center py-6 bg-[#0B090A]"
         style="background-image: url('assets/bg-pattern.png');"
@@ -29,7 +29,7 @@
         </div>
     </div>
     <div
-        class="flex flex-row my-12 justify-center w-full items-center h-[70vh] bg-white"
+        class="flex flex-row my-12 justify-center w-full items-center h-[80vh] bg-white"
     >
         <img src="assets/Cartridges-red.png" alt="" />
         <div class="ml-10">
