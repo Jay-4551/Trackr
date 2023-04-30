@@ -11,8 +11,8 @@ export interface SingleGame {
   cover: { id: number, image_id: string },
   involved_companies: { id: number, name: string },
   summary: string,
-  screenshots: { image_id: string, url: string },
-  genres: { name: string }
+  screenshots: { image_id: string, url: string }
+  videos: { video_id: string }
 }
 
 export interface Platform {
