@@ -16,7 +16,7 @@ export async function load({ fetch, params }) {
             'Client-ID': 'vcyrscnerz5ln3g60izbyzu9fxmu15',
             'Authorization': 'Bearer fxr3syzsjancx9vzdgryoq89lz6udy',
         },
-        body: `fields name, platforms.*, cover.image_id, involved_companies.company.name, summary, screenshots.*, first_release_date, rating, storyline, videos.*; search "${params.gameName}";where cover.image_id != null
+        body: `fields name, platforms.*, cover.image_id, involved_companies.company.name, summary, screenshots.*, first_release_date, rating, storyline, genres.*; search "${params.gameName}";where cover.image_id != null
          & keywords != [24124, 1147, 1034, 1603] & involved_companies != null & platforms != null  ; limit 10;`
     });
     const data = { data: await response.json() };
