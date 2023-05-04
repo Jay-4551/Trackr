@@ -50,10 +50,10 @@
                     )).toLocaleDateString("en-US")}
                   </h2>
                 </div>
-                <div class="flex flex-row mb-2 pt-2">
+                <div class="flex flex-wrap mb-2 pt-2">
                   {#each game.platforms as platform}
                     <div
-                      class="bg-[#BA181B] text-white text-xs font-semibold py-1 px-3 mr-3 w-fit rounded-sm cursor-default max-w-[14ch] truncate"
+                      class="bg-[#BA181B] text-white text-xs font-semibold py-1 px-3 mr-3 mb-3 w-fit rounded-sm cursor-default max-w-[14ch] truncate"
                     >
                       {platform.name}
                     </div>
